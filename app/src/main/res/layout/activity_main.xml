@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/black"
+    android:background="@android:color/darker_gray"
     tools:context="com.example.android.colorpicker.MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
         android:text="RGB(##, ##, ##)"
         android:textColor="@android:color/white"
         android:textAlignment="center"
@@ -20,7 +22,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -29,24 +32,27 @@
             android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_marginBottom="24dp"
                 android:layout_gravity="center"
                 android:text=""
                 android:background="@android:color/white"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_marginBottom="24dp"
                 android:layout_gravity="center"
                 android:text=""
                 android:background="@android:color/white"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_marginBottom="24dp"
                 android:layout_gravity="center"
                 android:text=""
@@ -61,24 +67,27 @@
             android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_4"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:text=""
                 android:layout_marginBottom="24dp"
                 android:background="@android:color/white"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_5"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:text=""
                 android:layout_marginBottom="24dp"
                 android:background="@android:color/white"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/button_6"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:text=""
                 android:layout_marginBottom="24dp"
@@ -93,6 +102,7 @@
         android:layout_gravity="center"
         android:text="Reset"
         android:layout_marginBottom="24dp"
-        android:background="@android:color/white" />
+        android:background="@android:color/white"
+        android:onClick="resetGame"/>
 
 </LinearLayout>
