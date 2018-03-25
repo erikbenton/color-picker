@@ -85,14 +85,13 @@ public class MainActivity extends AppCompatActivity {
     {
         background.setBackgroundColor(Color.rgb(0, 0, 0));
         resetButton.setText("Reset");
+        setWinningColor();
         setTitle();
         setButtonColors();
     }
 
-    public void setTitle()
+    public void setWinningColor()
     {
-        String titleText = "RGB(";
-
         red = getRandomInt();
         green = getRandomInt();
         blue = getRandomInt();
@@ -101,9 +100,12 @@ public class MainActivity extends AppCompatActivity {
         winningColor[1] = green;
         winningColor[2] = blue;
         winningColorString = "" + winningColor[0] + winningColor[1] + winningColor[2];
+    }
 
+    public void setTitle()
+    {
+        String titleText = "RGB(";
         titleText += red + ", " + green + ", " + blue + ")";
-
         title.setText(titleText);
     }
 
@@ -123,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
             buttonColors[i] = "" + redTemp + greenTemp + blueTemp;
         }
 
+        assignWinningSquare();
+
+    }
+
+    public void assignWinningSquare()
+    {
         int randomSquare = (int)(Math.random() * 6);
         buttons[randomSquare].setBackgroundColor(Color.rgb(winningColor[0], winningColor[1], winningColor[2]));
         buttonColors[randomSquare] = "" + winningColor[0] + winningColor[1] + winningColor[2];
